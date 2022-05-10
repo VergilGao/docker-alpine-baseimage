@@ -16,5 +16,7 @@ LABEL org.opencontainers.image.source="https://github.com/VergilGao/docker-alpin
 COPY --from=build-stage /src/bin/ /bin
 
 RUN apk --update  --no-cache add \
+    ca-certificates \
+    coreutils \
     shadow \
     tzdata
