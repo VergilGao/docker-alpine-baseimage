@@ -10,7 +10,6 @@ RUN cd /src && go build -o bin/gosu
 FROM alpine:3.15
 
 LABEL maintainer="VergilGao"
-LABEL build_from="https://github.com/tianon/gosu"
 LABEL org.opencontainers.image.source="https://github.com/VergilGao/docker-alpine-baseimage"
 
 COPY --from=build-stage /src/bin/ /bin
